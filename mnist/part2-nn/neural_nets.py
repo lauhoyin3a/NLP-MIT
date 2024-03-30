@@ -16,10 +16,13 @@ import math
 def rectified_linear_unit(x):
     """ Returns the ReLU of x, or the maximum between 0 and x."""
     # TODO
-
+    return max(0, x)
 def rectified_linear_unit_derivative(x):
     """ Returns the derivative of ReLU."""
     # TODO
+    if x<=0:
+        return 0
+    return 1
 
 def output_layer_activation(x):
     """ Linear function, returns input as is. """
@@ -55,6 +58,7 @@ class NeuralNetwork():
         input_values = np.matrix([[x1],[x2]]) # 2 by 1
 
         # Calculate the input and activation of the hidden layer
+        print()
         hidden_layer_weighted_input = # TODO (3 by 1 matrix)
         hidden_layer_activation = # TODO (3 by 1 matrix)
 
